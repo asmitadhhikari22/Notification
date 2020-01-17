@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private Button ch1;
     private Button ch2;
 
+    private int Count = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
 
-        notificationManagerCompat.notify(2, notification);
+        notificationManagerCompat.notify(Count, notification);
+        Count++;
     }
 
     private void DisplayNotification() {
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
 
-        notificationManagerCompat.notify(1, notification);
+        notificationManagerCompat.notify(Count, notification);
+        Count++;
     }
 }
